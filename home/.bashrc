@@ -124,3 +124,4 @@ source /usr/local/bin/virtualenvwrapper.sh
 export EDITOR=vim
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
