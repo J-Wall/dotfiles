@@ -32,6 +32,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'JuliaEditorSupport/julia-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,7 +63,7 @@ au FileType python setlocal colorcolumn=80
 au FileType gitcommit setlocal tw=68 spell spelllang=en_au
 au FileType tex setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType bib setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
-au FileType markdown setlocal textwidth=80 formatoptions+=t
+au FileType markdown setlocal spell spelllang=en_au textwidth=80 formatoptions+=t
 " au BufWritePost *.tex !pdflatex <afile>
 
 " Skeleton files
@@ -83,4 +84,4 @@ nnoremap Q gqip
 nnoremap <F5> "=strftime("%a %d %b %Y\n---------------\n")<CR>P
 inoremap <F5> <C-R>=strftime("%a %d %b %Y\n---------------\n")<CR>
 
-let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_folding_style_pythonic=1
