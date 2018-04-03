@@ -1,0 +1,4 @@
+split -v
+focus
+focus
+resize -h 84
