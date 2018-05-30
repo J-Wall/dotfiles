@@ -1,4 +1,7 @@
+startup_message_off
+defscrollback 1000
+
 split -v
 focus
 focus
-resize -h 84
+resize -h 85
