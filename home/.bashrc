@@ -116,9 +116,15 @@ fi
 alias ll='ls --color=auto -Flh'
 
 # virtualenv and virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+
+if [ `uname -o` == "Android" ]
+then
+	source /data/data/com.termux/usr/bin/virtualenvwrapper.sh
+else
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+	source /usr/local/bin/virtualenvwrapper.sh
+fi
 
 # Set default editor as vim
 export EDITOR=vim
