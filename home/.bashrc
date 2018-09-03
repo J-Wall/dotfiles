@@ -121,6 +121,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 if [ `uname -o` == "Android" ]
 then
 	source /data/data/com.termux/files/usr/bin/virtualenvwrapper.sh
+elif [ `hostname` == "bombus" ]
+then
+	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+	source /usr/local/bin/virtualenvwrapper.sh
 else
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 	source /usr/local/bin/virtualenvwrapper.sh
