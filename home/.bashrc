@@ -124,6 +124,7 @@ then
 elif [ `hostname` == "bombus" ]
 then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+	export VIRTUALENVWRAPPER_VIRTUALENV="$HOME/software/virtualenv/virtualenv"
 	source /usr/local/bin/virtualenvwrapper.sh
 else
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
