@@ -135,5 +135,9 @@ fi
 # Set default editor as vim
 export EDITOR=vim
 
+# fix screen cleanup issue
+export SCREENDIR=$HOME/.screen
+mkdir -p -m 700 $SCREENDIR
+
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
