@@ -35,6 +35,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'rust-lang/rust.vim'
+Plugin 'ajh17/VimCompletesMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
