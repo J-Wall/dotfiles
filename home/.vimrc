@@ -36,6 +36,7 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ajh17/VimCompletesMe'
+Plugin 'https://bitbucket.org/johanneskoester/snakemake.git', {'rtp': 'misc/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,6 +64,10 @@ autocmd BufWritePre * StripWhitespace
 syntax on
 
 au BufRead,BufNewFile *.rs set filetype=rust
+au BufNewFile,BufRead Snakefile set syntax=snakemake
+au BufNewFile,BufRead *.rules set syntax=snakemake
+au BufNewFile,BufRead *.snakefile set syntax=snakemake
+au BufNewFile,BufRead *.snake set syntax=snakemake
 au FileType python setlocal colorcolumn=80
 au FileType julia setlocal colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
 au FileType R setlocal colorcolumn=80 tabstop=2 shiftwidth=2 expandtab softtabstop=2 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
