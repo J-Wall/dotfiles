@@ -127,7 +127,7 @@ then
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 	export VIRTUALENVWRAPPER_VIRTUALENV="$HOME/software/virtualenv/virtualenv"
 	source /usr/local/bin/virtualenvwrapper.sh
-elif [ ${HOSTNAME:9} = "uppmax.uu.se" ]
+elif [ "${HOSTNAME:9}" = "uppmax.uu.se" ]
 then
 	# Modules, activate the module command
 	case "$0" in
@@ -145,8 +145,7 @@ then
 	        . /etc/bashrc
 	fi
 else
-	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-	source /usr/local/bin/virtualenvwrapper.sh
+	export PATH=$HOME/miniconda3/condabin:$PATH
 fi
 
 # Set default editor as vim
