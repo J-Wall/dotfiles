@@ -36,7 +36,7 @@ Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ajh17/VimCompletesMe'
-Plugin 'https://bitbucket.org/johanneskoester/snakemake.git', {'rtp': 'misc/vim/'}
+Plugin 'https://bitbucket.org/snakemake/snakemake.git', {'rtp': 'misc/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -64,10 +64,6 @@ autocmd BufWritePre * StripWhitespace
 syntax on
 
 au BufRead,BufNewFile *.rs set filetype=rust
-au BufNewFile,BufRead Snakefile set syntax=snakemake
-au BufNewFile,BufRead *.rules set syntax=snakemake
-au BufNewFile,BufRead *.snakefile set syntax=snakemake
-au BufNewFile,BufRead *.snake set syntax=snakemake
 au FileType python setlocal colorcolumn=80
 au FileType julia setlocal colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
 au FileType R setlocal colorcolumn=80 tabstop=2 shiftwidth=2 expandtab softtabstop=2 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
@@ -75,6 +71,10 @@ au FileType gitcommit setlocal tw=68 spell spelllang=en_au
 au FileType tex setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType bib setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType markdown setlocal spell spelllang=en_au textwidth=80 formatoptions+=t
+au BufNewFile,BufRead Snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.rules setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.snake setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 " au BufWritePost *.tex !pdflatex <afile>
 
 " Skeleton files
