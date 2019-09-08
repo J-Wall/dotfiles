@@ -144,6 +144,7 @@ then
 	if [ -f /etc/bashrc ]; then
 	        . /etc/bashrc
 	fi
+	alias ji="jobinfo -u ${USER} -M rackham,snowy"
 else
 	export PATH=$HOME/miniconda3/condabin:$PATH
 fi
