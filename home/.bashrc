@@ -123,7 +123,7 @@ then
 	source /data/data/com.termux/files/usr/bin/virtualenvwrapper.sh
 elif [ `hostname` == "bombus" ]
 then
-	export PATH=$HOME/bin:$PATH
+	export PATH=$HOME/bin:$HOME/local/bin:$PATH
 	export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 	export VIRTUALENVWRAPPER_VIRTUALENV="$HOME/software/virtualenv/virtualenv"
 	source /usr/local/bin/virtualenvwrapper.sh
