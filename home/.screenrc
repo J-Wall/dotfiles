@@ -1,4 +1,4 @@
-startup_message_off
+startup_message off
 defscrollback 1000
 
 focus
