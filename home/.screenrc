@@ -5,3 +5,5 @@ split -v
 focus
 focus
 resize -h 85
+
+shell "$HOME/local/bin/fish"
