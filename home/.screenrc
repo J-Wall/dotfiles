@@ -1,4 +1,7 @@
 startup_message_off
 defscrollback 1000
 
+focus
+focus
+
 shell "$HOME/local/bin/fish"
