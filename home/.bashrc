@@ -169,3 +169,4 @@ mkdir -p -m 700 $SCREENDIR
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
 
+. "$HOME/.cargo/env"

@@ -12,3 +12,4 @@ set -g theme_date_timezone Australia/Canberra
 conda activate phd
 
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+set -x DISPLAY localhost:0.0
