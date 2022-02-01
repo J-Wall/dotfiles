@@ -31,13 +31,14 @@ Plugin 'nvie/vim-flake8'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'preservim/vim-markdown'
 Plugin 'JuliaEditorSupport/julia-vim'
 Plugin 'chrisbra/csv.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'ajh17/VimCompletesMe'
 Plugin 'https://github.com/snakemake/snakemake.git', {'rtp': 'misc/vim/'}
 Plugin 'whonore/vim-sentencer'
+Plugin 'lindemann09/jags.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,8 +72,9 @@ au FileType R setlocal colorcolumn=89 tabstop=2 shiftwidth=2 expandtab softtabst
 au FileType gitcommit setlocal tw=68 spell spelllang=en_au
 au FileType tex setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType bib setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
-au FileType markdown setlocal spell spelllang=en_au formatoptions+=t
+au FileType markdown setlocal spell spelllang=en_au formatoptions+=t syntax=off
 au FileType yaml setlocal wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
+au FileType jags setlocal colorcolumn=89 tabstop=2 shiftwidth=2 expandtab softtabstop=2 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
 au BufNewFile,BufRead Snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 au BufNewFile,BufRead *.rules setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 au BufNewFile,BufRead *.snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
@@ -98,6 +100,8 @@ nnoremap <F5> "=strftime("%a %d %b %Y\n---------------\n")<CR>P
 inoremap <F5> <C-R>=strftime("%a %d %b %Y\n---------------\n")<CR>
 
 let g:vim_markdown_folding_style_pythonic=1
+
+let g:csv_delim_test = ',;|'
 
 set list
 set listchars=nbsp:⍽
