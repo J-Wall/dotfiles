@@ -1,7 +1,7 @@
-startup_message_off
+startup_message off
 defscrollback 1000
 
-split -v
 focus
 focus
-resize -h 85
+
+shell "$HOME/local/bin/fish"
