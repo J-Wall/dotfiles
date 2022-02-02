@@ -38,6 +38,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'ajh17/VimCompletesMe'
 Plugin 'https://github.com/snakemake/snakemake.git', {'rtp': 'misc/vim/'}
 Plugin 'whonore/vim-sentencer'
+Plugin 'psf/black'
+Plugin 'lindemann09/jags.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -72,11 +74,14 @@ au FileType gitcommit setlocal tw=68 spell spelllang=en_au
 au FileType tex setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType bib setlocal spell spelllang=en_au wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType markdown setlocal spell spelllang=en_au formatoptions+=t
+au BufRead,BufNewFile *.rst setlocal spell spelllang=en_au formatoptions+=t
 au FileType yaml setlocal wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
+au FileType json setlocal wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au BufNewFile,BufRead Snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 au BufNewFile,BufRead *.rules setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 au BufNewFile,BufRead *.snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 au BufNewFile,BufRead *.snake setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.smk setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 " au BufWritePost *.tex !pdflatex <afile>
 
 " Skeleton files
