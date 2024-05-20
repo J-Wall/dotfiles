@@ -1,0 +1,14 @@
+[[language]]
+name = "rust"
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"
+
+[[language]]
+name = "python"
+file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct","Snakefile","smk"]
+auto-format = false
+
+[[language]]
+name = "markdown"
+file-types = ["md", "markdown", "PULLREQ_EDITMSG", "mkd", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "qmd", "workbook"]

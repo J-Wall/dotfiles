@@ -1,0 +1,10 @@
+theme = "dracula"
+
+[editor]
+mouse = false
+line-number = "relative"
+idle-timeout = 0
+auto-pairs = false
+
+[editor.search]
+smart-case = false
