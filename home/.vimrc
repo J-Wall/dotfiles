@@ -40,6 +40,7 @@ Plugin 'https://github.com/snakemake/snakemake.git', {'rtp': 'misc/vim/'}
 Plugin 'whonore/vim-sentencer'
 Plugin 'psf/black'
 Plugin 'lindemann09/jags.vim'
+Plugin 'salsifis/vim-transpose'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,6 +59,8 @@ filetype plugin indent on    " required
 
 set number
 set numberwidth=2
+set expandtab
+set tabstop=4
 
 set pastetoggle=<F2>
 
@@ -78,11 +81,11 @@ au BufRead,BufNewFile *.rst setlocal spell spelllang=en_au formatoptions+=t
 au FileType yaml setlocal wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType json setlocal wrap linebreak nolist tabstop=2 shiftwidth=2 expandtab softtabstop=2
 au FileType jags setlocal colorcolumn=89 tabstop=2 shiftwidth=2 expandtab softtabstop=2 foldmethod=indent foldnestmax=10 nofoldenable foldlevel=2
-au BufNewFile,BufRead Snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
-au BufNewFile,BufRead *.rules setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
-au BufNewFile,BufRead *.snakefile setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
-au BufNewFile,BufRead *.snake setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
-au BufNewFile,BufRead *.smk setlocal syntax=snakemake colorcolumn=80 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead Snakefile setlocal syntax=snakemake colorcolumn=88 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.rules setlocal syntax=snakemake colorcolumn=88 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.snakefile setlocal syntax=snakemake colorcolumn=88 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.snake setlocal syntax=snakemake colorcolumn=88 tabstop=4 shiftwidth=4 expandtab softtabstop=4
+au BufNewFile,BufRead *.smk setlocal syntax=snakemake colorcolumn=88 tabstop=4 shiftwidth=4 expandtab softtabstop=4
 " au BufWritePost *.tex !pdflatex <afile>
 
 " Skeleton files
@@ -107,5 +110,4 @@ let g:vim_markdown_folding_style_pythonic=1
 
 let g:csv_delim_test = ',;|'
 
-set list
-set listchars=nbsp:⍽
+set list lcs=tab:→\ ·,nbsp:␣,trail:•,extends:⟩,precedes:⟨

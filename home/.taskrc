@@ -35,3 +35,5 @@ taskd.ca=~/.inthe.am/ca.cert.pem
 taskd.server=taskwarrior.inthe.am:53589
 taskd.credentials=inthe_am/jesse.rudolf.wallace/93883030-5632-4d18-93b8-1675c76f6434
 taskd.trust=ignore hostname
+context.nbdl=project:NBDL
+context=nbdl

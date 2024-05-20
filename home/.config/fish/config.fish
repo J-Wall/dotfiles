@@ -10,4 +10,4 @@ function __conda_add_prompt; end
 set -g theme_date_timezone Australia/Canberra
 
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
-set -x DISPLAY localhost:0.0
+#set -x DISPLAY localhost:0.0
