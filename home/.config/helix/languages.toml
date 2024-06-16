@@ -6,9 +6,22 @@ command = "clippy"
 
 [[language]]
 name = "python"
-file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct","Snakefile","smk"]
+file-types = ["py","pyi","py3","pyw","ptl",".pythonstartup",".pythonrc","SConstruct"]
 auto-format = false
 
 [[language]]
 name = "markdown"
 file-types = ["md", "markdown", "PULLREQ_EDITMSG", "mkd", "mdwn", "mdown", "markdn", "mdtxt", "mdtext", "qmd", "workbook"]
+
+[[language]]
+name = "snakemake"
+scope = "Snakefile"
+file-types = ["smk", { glob = "Snakefile" }]
+comment-tokens = "#"
+indent = { tab-width = 4, unit = "    " }
+text-width = 90
+formatter = { command = "snakefmt", args = ["-"] }
+
+[[grammar]]
+name = "snakemake"
+source = { git = "https://github.com/osthomas/tree-sitter-snakemake", rev = "ba1b3868eaa960b945593404af9a7c2f296d3643" }
